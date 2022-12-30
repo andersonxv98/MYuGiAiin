@@ -6,24 +6,26 @@
 
 MainControll::MainControll()
 {
-    ConnectionSQL * con = new ConnectionSQL();
-    con->select("SELECT * FROM aluno");
-      //ctrl  = new ControllRequest();
+   QPointer<ConnectionSQL>  con = new ConnectionSQL();
+   QList<QStringList> result = con->select("SELECT idexercicios, enunciado, resultado, professor.nome, materia.nome"
+                " FROM exercicios"
+                " INNER JOIN professor ON exercicios.fk_professor = professor.idprofessor"
+                " INNER JOIN materia ON exercicios.fk_materia= materia.idmateria");
+
+   QPointer<ControllerMaterias>  cm = new ControllerMaterias(con, &c_enun);
+  // qDebug() << "Nome da matéria mainController: " <<cm->getMaterias()[0]->getNome();//getExercicios()[0]->getProfessor();
+   // qDebug() << "Nome da matéria mainController: " <<cm->getMaterias()[0]->getExercicios().at(0)->getProfessor();
+
     const QUrl url(u"qrc:/MYuGiAiin/main.qml"_qs);
-    /*QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
-                     &app, [url](QObject *obj, const QUrl &objUrl) {
-        if (!obj && url == objUrl)
-            QCoreApplication::exit(-1);
-    }, Qt::QueuedConnection);
-    */
 
 
-    //this->rootContext()->setContextProperty("swControll", &c_swv);
-    //this->rootContext()->setContextProperty("c1",&c->getC_txt());
-    //this->rootContext()->setContextProperty("c2",&c2->getC_txt());
+
+    this->rootContext()->setContextProperty("materias_est",cm);
+   // this->rootContext()->setContextProperty("exercicios",&c2->getC_txt());
     this->rootContext()->setContextProperty("enchiridium",&c_enun);
     this->load(url);
-    QString texto = "gastou 2 horas percorrendo uma distância de 120 km. Que velocidade Andisu estava em seu passeio? passei a 5";
+    //Exercicio exerc;
+   /* QString texto = "teste 3, eqweqwqwqw 5";//result[0][1];
     QStringList text_enun = texto.split(" ");
     QList<QStringList> lista_enviada;
     for(const QString &palavra: text_enun){
@@ -36,7 +38,8 @@ MainControll::MainControll()
 
     }
     //c_enun.addOnArrastable(){})
-    c_enun.setEnunciado(lista_enviada);
+    c_enun.setEnunciadoOnFront(lista_enviada);
+    */
     //ctrl->setDataOnList();
     //connect(ctrl, &ControllRequest::boleanTerminou, this, &MainControll::trudShow);
     /*QPointer<Carta>   c = new  Carta("NOME QUALQUER", "purple", "https://images.ygoprodeck.com/images/cards/6983839.jpg");

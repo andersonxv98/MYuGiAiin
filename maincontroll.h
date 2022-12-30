@@ -8,6 +8,7 @@
 #include "../BibliotecaQQuickWidgets/biblioteca/base/cplus/controllswipeview.h"
 #include "../BibliotecaQQuickWidgets/biblioteca/base/cplus/controllerenunciado.h"
 #include "../BibliotecaQQuickWidgets/biblioteca/base/cplus/conecctionsql.h"
+#include "../BibliotecaQQuickWidgets/biblioteca/base/cplus/controllermaterias.h"
 #include <QDebug>
 class MainControll : public QQmlApplicationEngine
 {
@@ -20,7 +21,7 @@ public:
 private:
     ControllSwipeView c_swv;
     ControllRequest * ctrl;
-    ControllerEnunciado c_enun;
+    ControllerExercicio c_enun;
 
 };
 

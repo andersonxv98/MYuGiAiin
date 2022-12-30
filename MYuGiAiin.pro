@@ -20,6 +20,8 @@ SOURCES += \
         ../BibliotecaQQuickWidgets/biblioteca/base/cplus/controllerimagem.cpp \
         ../BibliotecaQQuickWidgets/biblioteca/base/cplus/controlleritem.cpp \
         ../BibliotecaQQuickWidgets/biblioteca/base/cplus/controllerkeys.cpp \
+        ../BibliotecaQQuickWidgets/biblioteca/base/cplus/controllermaterias.cpp \
+        ../BibliotecaQQuickWidgets/biblioteca/base/cplus/controllermodelsqml.cpp \
         ../BibliotecaQQuickWidgets/biblioteca/base/cplus/controllerrotation.cpp \
         ../BibliotecaQQuickWidgets/biblioteca/base/cplus/controllersubitemdinamico.cpp \
         ../BibliotecaQQuickWidgets/biblioteca/base/cplus/controllmarcadores.cpp \
@@ -29,7 +31,9 @@ SOURCES += \
         ../BibliotecaQQuickWidgets/biblioteca/base/cplus/models/carta.cpp \
         ../BibliotecaQQuickWidgets/biblioteca/base/cplus/models/componente.cpp \
         ../BibliotecaQQuickWidgets/biblioteca/base/cplus/models/componentecomposto.cpp \
+        ../BibliotecaQQuickWidgets/biblioteca/base/cplus/models/exercicio.cpp \
         ../BibliotecaQQuickWidgets/biblioteca/base/cplus/models/marcadores.cpp \
+        ../BibliotecaQQuickWidgets/biblioteca/base/cplus/models/materia.cpp \
         controllrequest.cpp \
         main.cpp \
         maincontroll.cpp \
@@ -47,6 +51,8 @@ RESOURCES += resources\
     ../BibliotecaQQuickWidgets/biblioteca/base/qml/btnOperadores.qml\
     ../BibliotecaQQuickWidgets/biblioteca/base/qml/enunciado.qml \
     ../BibliotecaQQuickWidgets/biblioteca/base/qml/resolucao.qml \
+    ../BibliotecaQQuickWidgets/biblioteca/base/qml/menudragndrop.qml \
+    ../BibliotecaQQuickWidgets/biblioteca/base/qml/exercicioslistamateria.qml \
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
 QML_IMPORT_PATH =
@@ -74,8 +80,10 @@ DISTFILES += \
     ../BibliotecaQQuickWidgets/biblioteca/base/qml/componente2.qml \
     ../BibliotecaQQuickWidgets/biblioteca/base/qml/customlabel.qml \
     ../BibliotecaQQuickWidgets/biblioteca/base/qml/dragNDop.qml \
+    ../BibliotecaQQuickWidgets/biblioteca/base/qml/exercicioslistamateria.qml \
     ../BibliotecaQQuickWidgets/biblioteca/base/qml/imagem.qml \
     ../BibliotecaQQuickWidgets/biblioteca/base/qml/marcadores.qml \
+    ../BibliotecaQQuickWidgets/biblioteca/base/qml/menudragndrop.qml \
     ../BibliotecaQQuickWidgets/biblioteca/base/qml/ponteiro.qml \
     ../BibliotecaQQuickWidgets/biblioteca/base/qml/resolucao.qml \
     ../BibliotecaQQuickWidgets/biblioteca/base/qml/retangulo.qml \
@@ -112,6 +120,8 @@ HEADERS += \
     ../BibliotecaQQuickWidgets/biblioteca/base/cplus/controllerimagem.h \
     ../BibliotecaQQuickWidgets/biblioteca/base/cplus/controlleritem.h \
     ../BibliotecaQQuickWidgets/biblioteca/base/cplus/controllerkeys.h \
+    ../BibliotecaQQuickWidgets/biblioteca/base/cplus/controllermaterias.h \
+    ../BibliotecaQQuickWidgets/biblioteca/base/cplus/controllermodelsqml.h \
     ../BibliotecaQQuickWidgets/biblioteca/base/cplus/controllerrotation.h \
     ../BibliotecaQQuickWidgets/biblioteca/base/cplus/controllersubitemdinamico.h \
     ../BibliotecaQQuickWidgets/biblioteca/base/cplus/controllmarcadores.h \
@@ -121,7 +131,9 @@ HEADERS += \
     ../BibliotecaQQuickWidgets/biblioteca/base/cplus/models/carta.h \
     ../BibliotecaQQuickWidgets/biblioteca/base/cplus/models/componente.h \
     ../BibliotecaQQuickWidgets/biblioteca/base/cplus/models/componentecomposto.h \
+    ../BibliotecaQQuickWidgets/biblioteca/base/cplus/models/exercicio.h \
     ../BibliotecaQQuickWidgets/biblioteca/base/cplus/models/marcadores.h \
+    ../BibliotecaQQuickWidgets/biblioteca/base/cplus/models/materia.h \
     controllrequest.h \
     maincontroll.h \
     restclient.h \

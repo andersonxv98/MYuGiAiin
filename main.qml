@@ -8,16 +8,17 @@ Window {
     visibility: "FullScreen"
     title: qsTr("Hello World")
 
-   Loader{
-    anchors.fill: parent
-    source: "qrc:/resolucao.qml"
-   }
-   Loader{
-    anchors.fill: parent
-    source: "qrc:/btnOperadores.qml"
-   }
-   Loader{
-       anchors.fill: parent
-       source: "qrc:/enunciado.qml"
-   }
+
+    Loader{
+         anchors.fill: parent
+       source: "qrc:/menudragndrop.qml"
+    }
+    Loader{
+         anchors.fill: parent
+       source: "qrc:/exercicioslistamateria.qml"
+    }
+    Loader{
+      anchors.fill: parent
+      source: "qrc:/dragNDop.qml"
+     }
 }
